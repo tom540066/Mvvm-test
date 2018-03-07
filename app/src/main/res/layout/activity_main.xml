@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.zhuyuanshuju.mvvmtest.MainViewModel" />
+
+        <import type="com.example.zhuyuanshuju.mvvmtest.R" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tt"
+            android:text="Hello World!" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            bind:placeholderImageRes="@{R.mipmap.ic_launcher}"
+            bind:request_height="@{400}"
+            bind:request_width="@{400}"
+            bind:uri="@{viewModel.imageUrl}" />
+
+        <Button
+            android:layout_width="match_parent"
+            bind:clickCommand="@{viewModel.btnClick}"
+            android:text="111"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</layout>
