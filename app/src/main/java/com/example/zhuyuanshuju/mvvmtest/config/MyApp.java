@@ -1,4 +1,4 @@
-package com.example.zhuyuanshuju.mvvmtest;
+package com.example.zhuyuanshuju.mvvmtest.config;
 
 import android.app.Application;
 

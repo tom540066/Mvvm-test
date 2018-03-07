@@ -1,4 +1,4 @@
-package com.example.zhuyuanshuju.mvvmtest;
+package com.example.zhuyuanshuju.mvvmtest.model;
 
 import android.content.Context;
 import android.databinding.ObservableField;
@@ -26,7 +26,6 @@ public class MainViewModel implements ViewModel {
     public MainViewModel(Context context) {
         this.context = context;
         imageUrl.set("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=314432927,1563517790&fm=27&gp=0.jpg");
-
 
     }
 }

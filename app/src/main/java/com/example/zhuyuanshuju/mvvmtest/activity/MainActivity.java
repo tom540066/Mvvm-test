@@ -1,10 +1,13 @@
-package com.example.zhuyuanshuju.mvvmtest;
+package com.example.zhuyuanshuju.mvvmtest.activity;
 
 import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.zhuyuanshuju.mvvmtest.R;
+import com.example.zhuyuanshuju.mvvmtest.model.MainViewModel;
 
 public class MainActivity extends Activity {
     private MainViewModel model;

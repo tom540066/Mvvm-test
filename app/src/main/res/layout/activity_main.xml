@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.zhuyuanshuju.mvvmtest.MainViewModel" />
+            type="com.example.zhuyuanshuju.mvvmtest.model.MainViewModel" />
 
         <import type="com.example.zhuyuanshuju.mvvmtest.R" />
     </data>
@@ -33,7 +33,15 @@
         <Button
             android:layout_width="match_parent"
             bind:clickCommand="@{viewModel.btnClick}"
-            android:text="111"
+            android:tag="1"
+            android:text="listview刷新"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="match_parent"
+            bind:clickCommand="@{viewModel.btnClick}"
+            android:tag="2"
+            android:text="fragment使用"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
