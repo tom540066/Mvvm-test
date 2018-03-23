@@ -5,6 +5,5 @@ package com.example.zhuyuanshuju.mvvmtest.aautil.inter;
  * @author 刘帅
  * */
 public interface HttpValue<T> {
-
 	void success(T data);
 }
