@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xrefreshview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.example.zhuyuanshuju.mvvmtest.R" />
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.example.zhuyuanshuju.mvvmtest.model.ListDemoModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <include layout="@layout/all_cancel_nav"
+            app:viewModel= "@{viewModel}"
+            />
+
+        <com.andview.refreshview.XRefreshView
+            android:id="@+id/pull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            xrefreshview:isHeightMatchParent="true"
+            xrefreshview:isWidthMatchParent="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/news_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="@{LayoutManagers.linear()}"
+            app:itemBinding="@{viewModel.itemView}"
+            app:items="@{viewModel.itemViewModel}"
+        />
+        </com.andview.refreshview.XRefreshView>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/recyclerView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--bind:itemView="@{viewModel.itemView}"-->
+            <!--bind:items="@{viewModel.itemViewModel}"-->
+            <!--bind:layoutManager="@{LayoutManagers.linear()}"-->
+            <!--bind:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+            <!--bind:onLoadMoreCommand="@{viewModel.onLoadMoreCommand}">-->
+
+        <!--</android.support.v7.widget.RecyclerView>-->
+    </LinearLayout>
+</layout>

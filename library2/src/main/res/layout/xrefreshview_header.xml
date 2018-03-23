@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xrefreshview_header_text"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@android:color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/left_images"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/right_text"
+        android:layout_marginRight="50dp" >
+
+        <ImageView
+            android:id="@+id/xrefreshview_header_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/xrefreshview_arrow" />
+
+        <ProgressBar
+            android:id="@+id/xrefreshview_header_progressbar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <ImageView
+            android:id="@+id/xrefreshview_header_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/xrefresh_ok" />
+
+        <TextView
+            android:id="@+id/xrefreshview_header_hint_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/xrefreshview_header_ok"
+            android:textColor="#aaaaaa"
+            android:text="@string/xrefreshview_header_hint_normal" />
+
+        <TextView
+            android:id="@+id/xrefreshview_header_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/xrefreshview_header_ok"
+            android:layout_below="@+id/xrefreshview_header_hint_textview"
+            android:layout_marginTop="3dp"
+            android:textColor="#aaaaaa"
+            android:layout_centerHorizontal="true"
+            android:text="@string/xrefreshview_never_refresh"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</RelativeLayout>

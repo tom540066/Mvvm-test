@@ -61,7 +61,7 @@ public class ReplyCommand<T> {
     public void execute(T parameter) {
         if (execute1 != null && canExecute0()) {
             execute1.call(parameter);
-        }
+        }else execute();
     }
 
 }

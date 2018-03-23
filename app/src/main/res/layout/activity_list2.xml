@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xrefreshview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.example.zhuyuanshuju.mvvmtest.R" />
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.example.zhuyuanshuju.mvvmtest.model.List2DemoModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.andview.refreshview.XRefreshView
+            android:id="@+id/pull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            xrefreshview:isHeightMatchParent="true"
+            xrefreshview:isWidthMatchParent="true">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/news_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="@{LayoutManagers.linear()}"
+        />
+        </com.andview.refreshview.XRefreshView>
+    </LinearLayout>
+</layout>

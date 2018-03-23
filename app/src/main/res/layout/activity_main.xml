@@ -32,14 +32,21 @@
 
         <Button
             android:layout_width="match_parent"
-            bind:clickCommand="@{viewModel.btnClick}"
+            android:onClick="@{viewModel.btnClick}"
             android:tag="1"
             android:text="listview刷新"
             android:layout_height="wrap_content" />
 
         <Button
             android:layout_width="match_parent"
-            bind:clickCommand="@{viewModel.btnClick}"
+            android:onClick="@{viewModel.btnClick}"
+            android:tag="2"
+            android:text="listview自定义adapter"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="match_parent"
+            bind:clickCommand="@{viewModel.btnClick1}"
             android:tag="2"
             android:text="fragment使用"
             android:layout_height="wrap_content" />

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xrefreshview_footer_content"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:id="@+id/xrefreshview_footer_progressbar"
+        android:orientation="horizontal"
+        >
+        <ProgressBar
+            android:layout_width="25dip"
+            android:layout_height="25dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:gravity="center"
+            android:textColor="#aaaaaa"
+            android:text="@string/xrefreshview_header_hint_loading" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/xrefreshview_footer_hint_textview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/xrefreshview_footer_hint_normal" />
+
+
+    <TextView
+        android:id="@+id/xrefreshview_footer_click_textview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/xrefreshview_footer_hint_ready" />
+</RelativeLayout>

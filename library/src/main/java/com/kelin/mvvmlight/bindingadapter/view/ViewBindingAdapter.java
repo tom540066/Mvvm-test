@@ -18,7 +18,7 @@ public final class ViewBindingAdapter {
             @Override
             public void onClick(View v) {
                 if (clickCommand != null) {
-                    clickCommand.execute();
+                    clickCommand.execute(v);
                 }
             }
         });

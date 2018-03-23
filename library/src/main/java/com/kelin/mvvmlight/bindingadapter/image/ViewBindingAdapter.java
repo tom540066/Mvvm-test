@@ -19,6 +19,7 @@ import com.facebook.imagepipeline.image.CloseableImage;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.kelin.mvvmlight.command.ReplyCommand;
+import com.bumptech.glide.Glide;
 
 /**
  * Created by kelin on 16-3-24.
@@ -30,6 +31,11 @@ public final class ViewBindingAdapter {
         if (!TextUtils.isEmpty(uri)) {
             simpleDraweeView.setImageURI(Uri.parse(uri));
         }
+    }
+
+    @BindingAdapter({"resId"})
+    public static void loadMipmapResource(ImageView iv, int resId) {
+        iv.setImageResource(resId);
     }
 
 
@@ -66,6 +72,18 @@ public final class ViewBindingAdapter {
                 }
             }, UiThreadImmediateExecutorService.getInstance());
         }
+    }
+
+    /**
+     * mv_vm xml 传入url 加载图片
+     * imageUrl 为xml中 的命名
+     *
+     * @param iv   imageView
+     * @param url 图片路径
+     */
+    @BindingAdapter({"imageUrl"})
+    public static void loadImage(ImageView iv, String url) {
+        Glide.with(iv.getContext()).load(url).into(iv);
     }
 
 }

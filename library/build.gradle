@@ -34,13 +34,17 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'me.tatarka.bindingcollectionadapter:bindingcollectionadapter:1.1.0'
-    compile 'me.tatarka.bindingcollectionadapter:bindingcollectionadapter-recyclerview:1.1.0'
+
+    //版本不兼容请查看 https://github.com/evant/binding-collection-adapter/tree/databinding-v2
+    compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0'
+    compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0'
+
     compile 'com.facebook.fresco:fresco:0.9.0+'
-    testCompile 'junit:junit:4.12'
+    //图片加载使用的库
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }
 
 //apply from: "bintrayUpload.gradle"
